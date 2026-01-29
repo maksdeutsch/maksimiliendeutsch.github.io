@@ -1,0 +1,970 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Kaushan+Script&family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+#page-de-garde-site {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.3),#5afeb438),url("images/epf-batiment.png");
+    background-position: bottom;
+    background-size: cover;
+    padding: 10px 0; 
+}
+
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px; 
+    position: relative;
+    padding: 0 10px; 
+}
+
+header .logo-epf img {
+    height: 150px; /* taille souhaitée */
+    width: auto;
+    position: absolute; 
+    top: 90%;
+    left: 1%; 
+    transform: translateY(-50%);
+}
+
+header .menu {
+    display: flex;
+    list-style: none;
+}
+header .menu li {
+    margin:  0 15px;
+}
+header .menu li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+}
+.Slogan {             /* on gère la zone pure */
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 200px; 
+}
+.Slogan h1 {   
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*Scrollbar on touche pas !*/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+
+
+#qui-suis-je {
+    height: fit-content;
+    margin: 0 10%;
+}
+
+#introduction {     
+    height: fit-content;
+    margin: 0 10%;
+}
+
+
+
+
+.tittle-section {      
+    text-align: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #5afeb4;
+    font-size: 25px;
+}
+.sub-tittle-section {
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+/* Pour la page principale*/
+
+.photo-portrait {
+    display: flex;             
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;    
+    gap: 100px;                  
+    margin-top: 50px;
+}
+
+.paragraphe-desc {
+    max-width: 800px;          
+}
+
+.paragraphe-desc p {
+    font-size: 14px;           
+    line-height: 1.6;          
+    font-family: 'Poppins', sans-serif;  
+    text-align: justify;        
+}
+
+.photo-portrait img {
+    width: 425px;             
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;         
+}
+
+/* PROJET */
+
+
+
+#projets {
+    height: 100vh;
+    width: 100%;
+   
+}
+
+.photo-paragraphe-pvba,
+.photo-paragraphe-pcv5,
+.photo-paragraphe-pj,
+.photo-paragraphe-pps {
+    display: flex;            
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;   
+    gap: 100px;                
+    margin-top: 100px;
+}
+
+.paragraphe-desc-pps {
+    max-width: 700px;         
+}
+
+
+.paragraphe-desc-pj p {
+    max-width: 700px;
+    font-size: 14px;         
+    line-height: 1.6;          
+    font-family: 'Poppins', sans-serif;  
+    text-align: justify;         /* texte plus lisible */
+}
+
+.photo-paragraphe-pvba p,
+.paragraphe-desc-pcv5 p,
+.paragraphe-desc-pps p {
+    font-size: 14px;         
+    line-height: 1.6;          
+    font-family: 'Poppins', sans-serif;  
+    text-align: justify;         /* texte plus lisible */
+}
+
+.photo-paragraphe-pj img,
+.photo-paragraphe-pcv5 img {
+    width:500px;              
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;          /* pour pas déformer l'image */
+}
+
+.photo-paragraphe-pps img {
+    width: 425px;              
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;          /* pour pas déformer l'image */
+}
+
+.photo-paragraphe-pvba img {
+    width: 525px;              
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;          /* pour pas déformer l'image */
+}
+
+#rapport {
+    margin-top: 10vh;
+    height: 100vh;
+    width: 100%;
+   
+}
+
+#conclusion {
+    margin-top: 15vh;
+    height: auto;
+    width: 100%;
+   
+}
+
+
+.liste-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding:  0 22.5%;
+   
+}
+.liste-photos .projets-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.liste-photos .projets-img {
+    width: 49%;
+    border-radius: 10PX;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1%;
+    cursor: pointer;
+ 
+}
+.liste-photos .projets-img:hover img {
+    transform: scale(1.2);
+}
+.show-country {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(78, 75, 75, 0.5);
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.show-country p {
+    font-weight: bold;
+    font-size: 30px;
+}
+.liste-photos .projets-img:hover .show-country {
+    opacity: 1;
+}
+#contact {
+    height: 50vh;
+    margin: 0 10%;
+    width: 80%;
+}
+
+
+footer{
+    background-color: #5afeb4;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    margin-top: 100px;
+
+}
+
+
+#pdf-container {
+  width: 70%;
+  height: 90vh;
+  max-width: 1240px;
+  margin: 40px auto;
+  border: 10px solid #0a9f2a3b;
+  overflow-y: auto;
+}
+
+.pdf-gdf {
+width: 70%;
+height: 90vh;
+max-width: 1240px;
+margin: 40px auto;
+border: 10px solid #0a9f2a3b;
+overflow-y: auto;
+}
+
+
+.pdf-gdf canvas {
+width: 100%;
+height: auto;
+display: block;
+margin: 20px auto;
+}
+
+
+
+.pdf-fallback{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+.infos-contact {
+    display: flex;
+    flex-direction: row;       
+    align-items: center;       
+    justify-content: center;   
+    gap:475px;                 
+    margin-top: 100px;
+    flex-wrap: wrap;        
+}
+
+.infos {
+    flex: 0 0 auto;              
+}
+
+.infos p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0;              
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;                
+    justify-content: center;   
+    align-items: center;      
+}
+
+.logos img {
+    height: 45px;              /* taille moyenne pour équilibre */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+.conclusion-linkedin {
+    display: flex;
+    flex-direction: column;       
+    align-items: center;       
+    justify-content: center;  
+    gap:50px;               
+    margin-top: 75px;
+    flex-wrap: wrap;            /* prend tout l’espace disponible à gauche */
+}
+
+.conclusion-linkedin p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0;               /* espace entre les paragraphes */
+    width: 1000px;
+
+}
+
+.remerciements {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.linkedin {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/*section Démonstration*/
+
+.title-section {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-family: "Poppins", sans-serif;
+    color: #5afeb4;
+}
+
+#presentation-pvba,
+#presentation-pcv5,
+#presentation-pj {
+    margin-top: 10vh;
+}
+
+
+/* Première ligne : texte + vidéo */
+
+.excel-catia-v5,
+.code-java,
+.visual-basics,
+.demonstration {
+    display: flex;
+    margin-top: 100px;
+    gap: 150px;          /* espace entre texte et vidéo */
+    align-items: center; /* tout aligné en haut */
+    justify-content: center; 
+}
+
+.demonstration p{
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;         
+}
+.visual-basics p{
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 17px;         /*14 pour ce paragraphe car photos paysage*/
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;         
+}
+.code-java p{
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 14px;         /*14 pour ce paragraphe car photos paysage*/
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;         
+}
+
+.excel-catia-v5 p{
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;         
+}
+
+.von-mises-catia-v5 p{
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;         
+}
+
+
+.demonstration video {
+    flex: 1;             /* prend l’autre moitié */
+    max-width: 20%;     /* responsive */
+    border-radius: 10px;
+}
+
+
+.code-java img {
+    flex: 1;             /* prend l’autre moitié */
+    max-width: 30%;     /* responsive */
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #5afeb4;
+    border-width: 2px;
+}
+
+.excel-catia-v5 img {
+    flex: 1;             /* prend l’autre moitié */
+    max-width: 30%;     /* responsive */
+    border-radius: 10px;
+}
+
+.visual-basics img {
+    flex: 1;             /* prend l’autre moitié */
+    max-width: 30%;     /* responsive */
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #5afeb4;
+    border-width: 2px;
+}
+
+
+/* Deuxième ligne : texte site web + image */
+
+.von-mises-catia-v5,
+.menu-java,
+.code-vba,
+.site-web-pps {
+    margin-top: 150px;
+    display: flex;
+    gap: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-java p {
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;  
+}
+
+.code-vba p {
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 17px;     /* car image verticale */
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;  
+}
+
+.site-web-pps p {
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 17px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;  
+}
+
+.von-mises-catia-v5 p {
+    flex: 1;
+    max-width: 700px;        /*gérer la width et line-height pour mettre en forme */
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;  
+}
+
+
+.site-web-pps img {
+    flex: 1;             /* image à droite */
+    max-width: 20%;     /* responsive */
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5afeb4;
+    border-width: 2px;
+    max-height: auto;
+}
+
+.menu-java img {     /* Je veux que cela soit différent de celui du panneau solaire*/
+    flex: 1;             /* image à droite */
+    max-width: 30%;     /* responsive */
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5afeb4;
+    border-width: 2px;
+    max-height: auto;
+}
+
+.code-vba img {     /* Je veux que cela soit différent de celui du panneau solaire*/
+    flex: 1;             /* image à droite */
+    max-width: 30%;     /* responsive */
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5afeb4;
+    border-width: 2px;
+    max-height: auto;
+}
+
+.von-mises-catia-v5 img {     /* Je veux que cela soit différent de celui du panneau solaire*/
+    flex: 1;             /* image à droite */
+    max-width: 30%;     /* responsive */
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5afeb4;
+    border-width: 2px;
+    max-height: auto;
+}
+
+
+
+/* a noter on centre le parent et pas le lien en CSS */
+
+#fin {
+    display: block;
+    margin-top: 100px;
+}
+
+
+.retour-accueil {
+    text-align: center;              /* centre le texte à l’intérieur */
+    margin: 40px auto 0 auto;        /* top 40px, horizontalement centré */
+    border: 2px solid #5afeb4;       /* bordure autour du texte */
+    max-width: 200px;                /* largeur max de la bordure/texte */
+    padding: 10px 20px;              /* espace intérieur pour respirer */
+    border-radius: 10px;             /* coins arrondis si tu veux */
+}
+
+.retour-accueil a {
+    color: #5afeb4;      /* optionnel, pour style */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+
+/*Responsive*/
+@media (max-width: 784px) {
+
+    /* Page de garde */
+    #page-de-garde-site {
+        padding-left: 0 !important;
+        padding-right: 10px; /* juste pour le menu */
+    }
+
+    header .menu {
+        display: none;
+    }
+
+    header .menu-toggle {
+        border: 2px solid #fff;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    header .menu-toggle::before,
+    header .menu-toggle::after {
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: #fff;
+        transition: 0.5s;
+    }
+
+    header .menu-toggle::before {
+        transform: translateY(-10px);
+        box-shadow: 0 10px #fff;
+    }
+
+    header .menu-toggle.active::before {
+        transform: translate(0) rotate(45deg);
+        box-shadow: 0 0 #fff;
+    }
+
+    header .menu-toggle::after {
+        transform: translateY(10px);
+    }
+
+    header .menu-toggle.active::after {
+        transform: translate(0) rotate(-45deg);
+    }
+
+    header .menu.responsive {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding-top: 100px;
+        height: fit-content;
+        background-color: #5afeb4e7;
+        width: 200px;
+    }
+
+    header .menu.responsive li {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .Slogan h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    /* Sections principales */
+    #qui-suis-je,
+    #introduction,
+    #projets,
+    #rapport,
+    #conclusion {
+        height: fit-content;
+        padding: 20px 5%;
+        margin: 0 auto;
+    }
+
+    /* Texte + image */
+
+    .photo-paragraphe-pvba,
+    .photo-paragraphe-pcv5,
+    .photo-paragraphe-pj,
+    .photo-portrait,
+    .photo-paragraphe-pps {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;
+        gap: 30px;
+    }
+
+    .paragraphe-desc,
+    .paragraphe-desc-pps,
+    .paragraphe-desc-pcv5
+    .paragraphe-desc-pj {
+        max-width: 90%;
+        flex: 1;
+    }
+
+    .paragraphe-desc p,
+    .paragraphe-desc-pps p,
+    .paragraphe-desc-pcv5 p,
+    .paragraphe-desc-pj p {
+        font-size: 12px;         /* plus lisible sur mobile */
+        line-height: 1.5;
+        font-family: Poppins, sans-serif;
+        text-align: justify;
+    }
+
+    .photo-paragraphe-pvba img,
+    .photo-paragraphe-pcv5 img,
+    .photo-paragraphe-pj img,
+    .photo-portrait img,
+    .photo-paragraphe-pps img {
+        width: 80%;            
+        max-width: 300px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    /* Liste de projets */
+    .liste-photos {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .liste-photos .projets-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .liste-photos .projets-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .show-country {
+        opacity: 1; 
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .show-country p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* PDF */
+    
+    .pdf-container {
+        max-width: 90%; 
+    }
+
+    #pdf-container canvas {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .pdf-gdf {
+        max-width: 90%;
+    }
+
+
+    .pdf-gdf canvas {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .infos-contact {
+        flex-direction: row;       
+        align-items: center;      
+        justify-content: center;   
+        gap: 10px;             
+        flex-wrap: nowrap;         
+    }
+
+    .infos {
+        flex: 0 0 60%;             /* texte prend 60% de l’espace */
+    }
+
+    .infos p {
+        font-size: 14px;           /* texte plus petit pour mobile */
+        line-height: 1.4;
+    }
+
+    .logos {
+        flex: 0 0 30%;             /* logos prennent 30% de l’espace */
+        gap: 8px;                  
+        flex-direction: column;    
+        justify-content: center;   
+        align-items: center;
+    }
+
+    .logos img {
+        height: 30px;              /* logos plus petits */
+        width: auto;
+    }
+
+    .conclusion-linkedin {
+        gap: 30px;
+        margin-top: 40px;
+        padding: 0 20px; 
+    }
+
+    .conclusion-linkedin p {
+        width: 100%;        
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .remerciements {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .linkedin {
+        gap: 30px;
+        align-items: left;
+    }
+
+    .linkedin li {
+        text-align: center;
+    }
+
+    .linkedin a {
+        font-size: 16px;
+    }
+
+    header {
+        padding-left: 0 !important; /* annule tout padding gauche */
+        padding-right: 10px;        /* pour le menu */
+        justify-content: flex-start;
+    }
+
+    header .logo-epf img {
+        position: static;      /* SORT du absolute */
+        height: 100px;    
+        transform: none;       /* enlève le translate */
+        margin-top: 35px;
+        margin-left: 15px;
+    }
+
+    .logo-epf {
+        margin-right: auto;    /* pousse le menu-toggle à droite */
+    }
+
+    .excel-catia-v5,
+    .code-java,
+    .visual-basics,
+    .demonstration {
+        flex-direction: column; /* empile verticalement */
+        gap: 30px;              /* espace réduit entre texte et vidéo */
+        margin-top: 50px;       /* ajustement pour mobile */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .excel-catia-v5 p,
+    .code-java p,
+    .visual-basics p,
+    .demonstration p {
+        max-width: 80%;       /* texte prend toute la largeur */
+        font-size: 14px;       /* comme demandé */
+        line-height: 1.6;      /* un peu plus serré pour mobile */
+        text-align: justify;    /* centré pour petit écran */
+    }
+
+    .demonstration video {
+        max-width: 80%;        /* vidéo plus large que sur desktop */
+        width: 200px;
+        height: auto;
+    }
+
+    .code-java img {
+        max-width: 80%;        /* image plus large que sur desktop */
+        width: 400px;
+        height: auto;
+    }
+
+
+    .excel-catia-v5 img {
+        max-width: 80%;        /* image plus large que sur desktop */
+        width: 400px;
+        height: auto;
+    }
+
+    .visual-basics img {
+        max-width: 80%;        /* image plus large que sur desktop */
+        width: 400px;
+        height: auto;
+    }
+
+    /* Deuxième ligne : texte site web + image */
+
+    .von-mises-catia-v5,
+    .menu-java,
+    .code-vba,
+    .site-web-pps {
+        flex-direction: column; /* empile verticalement */
+        gap: 30px;
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .von-mises-catia-v5 p,
+    .menu-java p,
+    .code-vba p,
+    .site-web-pps p {
+        max-width: 80%;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: justify; /*si je mets center c'est moins carré */
+    }
+    
+    .von-mises-catia-v5 img,
+    .menu-java img,
+    .code-vba img,
+    .site-web-pps img {
+        max-width: 80%;
+        width: 400px;
+        height: auto;
+    }
+
+    .retour-accueil {
+        max-width: 90%;          /* le texte est plus petit sur l'écran d'un téléphone c'est mieux */
+        margin: 30px auto 0 auto; /* espace au-dessus réduit, toujours centré */
+        padding: 8px 15px;       /* padding un peu plus petit pour mobile*/
+        font-size: 12px;         /* texte plus petit pour mobile */
+        border-width: 1.5px;     
+        border-radius: 8px;     
+    }
+
+    .retour-accueil a {
+        display: inline-block;    /* pour un centrage parfait du lien */
+        width: 100%;              /* lien prend toute la largeur du bloc */
+        text-align: center;       /* texte centré à l’intérieur du bloc*/
+    }
+
+
+
+
+
+}

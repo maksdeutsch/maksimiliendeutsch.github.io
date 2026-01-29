@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Panneau Solaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- section acceuil -->
+     <section id="page-de-garde-site">
+      <header>
+        <div class="logo-epf">
+            <img src="images/logo-epf.jpeg" alt="Logo EPF">
+        </div>
+
+        <!-- menu responsive -->
+        <div class="menu-toggle"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#rapport">Rapport</a></li>
+            <li><a href="#presentation-pj">Présentation</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </header>
+      <div class="Slogan">
+          <h1>Innovation - Audace - Engagement</h1>
+      </div>
+    </section> 
+
+    <!-- section Introduction-->
+     <section id="introduction">
+        <div>
+            <p class="tittle-section">Introduction</p>
+            <h1 class="sub-tittle-section">Introduction du projet </h1>
+            <div class="photo-paragraphe-pj">
+                    <div class="paragraphe-desc-pj">
+                        <p>Dans le cadre du module de Conception et Programmation Orientée Objet, nous avons réalisé un projet complet consistant à développer un jeu de stratégie en Java, intitulé Jeu de Château. Ce jeu oppose deux joueurs sur un plateau de 7x13 cases, où chacun doit protéger son château tout en tentant de capturer celui de l'adversaire ou d'éliminer l’ensemble de ses pièces.<br></br>
+                        Ce projet avait pour objectif principal de mobiliser et approfondir nos compétences en programmation orientée objet, notamment à travers la création et l’interaction de classes, l’héritage, la gestion des événements et la manipulation d’une interface graphique en Java avec Swing. Il a également constitué une opportunité concrète d’appliquer des concepts essentiels tels que la gestion de la logique métier, la modélisation d’un plateau de jeu, le contrôle des déplacements et la mise en place de conditions de victoire.<br></br>
+                        Au fil du développement, nous avons aussi travaillé sur l’implémentation de fonctionnalités avancées : interface graphique interactive, système de sauvegarde/chargement, gestion d’une intelligence artificielle basique et visualisation des actions du joueur. Ce projet nous a donc permis de lier conception logicielle, ergonomie et réflexion algorithmique dans une réalisation complète et fonctionnelle.</p>
+                    </div>
+                    <img src="images/jeu-java.jpg" alt="">
+            </div>
+        </div>
+    </section> 
+
+    <!-- section rapport -->
+<section id="rapport">
+  <p class="tittle-section">Rapport</p>
+  <div id="pdf-container" data-pdf="rapports/rapport-java.pdf"></div>
+  <p class = "pdf-fallback">Si le PDF ne s’affiche pas, vous pouvez le <a href="rapports/rapport-java.pdf" download>Télécharger ici</a>.</p>
+</section>
+
+
+<!-- Présentation   -->
+    <section id="presentation-pj">
+        <p class="title-section">Présentation</p>
+        <div class="code-java">
+            <p>
+            Nous avons modélisé le jeu en Java avec une architecture orientée objet : une classe mère Piece (pion) et une sous‑classe Cavalier qui prend en compte les déplacements en « L » supplémentaires.
+            En utilisant différentes classe on gère les mouvements, les captures par saut et les conditions de victoire (prise du château adverse ou élimination de toutes les pièces).
+            Le plateau est une matrice 7×13 de Piece, initialisée puis parcourue pour l’affichage et les vérifications de limites.<br></br>
+            On se sert de l'interface Swing afin de créer les différentes fiches telles que FAccueil (choix du mode, tirage des couleurs, pseudos) et PlateauJeu (grille cliquable, mise en surbrillance, boutons de directions et mouvements du cavalier).
+            Chaque clic sélectionne une pièce, puis un bouton de direction calcule newX/newY, valide le mouvement (bornes, occupation, couleur) et applique la capture si nécessaire.
+            Un système de sauvegarde/chargement enregistre les joueurs et pièces (type, couleur, coordonnées) pour reprendre une partie, tout cela grâce au Json.
+            Le mode contre ordinateur implémente une IA simple : à la fin du tour, elle évalue des distances vers les pièces adverses et choisit un déplacement orthogonal pour se rapprocher.<br></br>
+
+            Enfin, nous avons travaillé sur l’ergonomie (icônes, alternance des tours, messages) et listé des pistes d’amélioration (mouvements du cavalier, popups, esthétique, amélioration de l'IA).   
+            </p>
+            <image src="images/code-java.png" alt="Photo du code Java">
+        </div>
+        <div class="menu-java">
+            <p>
+            Cet écran correspond à la fenêtre FAcceuil, point d’entrée du Jeu de Château.
+            En haut, un message guide la saisie des pseudos : ici, c’est au tour du second joueur d’entrer son nom.<br></br>
+
+            Le champ de texte permet la saisie, et le bouton “Valider” enregistre le pseudo.
+            Le bouton “JOUER” (au centre) reste inactif tant que les informations nécessaires ne sont pas fournies.<br></br>
+
+            En bas, deux boutons définissent le mode de jeu : Local (1v1) actif, Ordinateur grisé lorsqu’indisponible, dans le cas de l'image on a entré deux joueurs donc on ne peut pas jouer contre l'IA.
+            Une fois les pseudos saisis, un tirage aléatoire attribue les couleurs et l’initiative au premier joueur.
+            Les noms des joueurs apparaissent en bas de la fenêtre pour récapitulatif.<br></br>
+
+            Le bouton “QUITTER” permet de fermer proprement l’application.
+            Après validation, FAcceuil transmet les paramètres à PlateauJeu et lance la partie.
+            Pour voir à quoi ressemble la partie une image est présente dans la section <a href="#introduction">"Introduction"</a>.
+            </p>
+            <img src="images/menu-java.jpg" alt="Photo du menu Java">
+            </div>
+    </section>
+
+
+<!--  Conclusion  -->
+    <section id="conclusion">
+        <p class="tittle-section">Conclusion</p>
+        <div class="conclusion-linkedin">
+            <p>
+            Ce projet Java nous a permis de mettre en pratique l’ensemble des connaissances acquises en programmation orientée objet et en développement d’interfaces graphiques. À travers la conception des classes, la gestion des déplacements, l’implémentation des règles et la création d’une interface intuitive, nous avons développé un jeu complet, fonctionnel et structuré.
+            <br></br>
+            Au‑delà des aspects techniques, ce travail nous a appris à organiser notre code, à anticiper les interactions entre les différentes parties du programme et à résoudre des problèmes concrets liés à la logique de jeu. L’ajout d’une intelligence artificielle simple, de la sauvegarde de partie et d’un menu d’accueil soigné a renforcé notre capacité à penser un projet dans sa globalité.
+            <br></br>
+            Ce projet a également été l’occasion d’améliorer notre esprit d’équipe, notre rigueur et notre autonomie. Même si certaines fonctionnalités restent perfectibles, nous sommes satisfaits du résultat obtenu et conscients des pistes d’amélioration possibles pour de futures évolutions.
+            <br></br>
+            Enfin, ce travail représente une étape importante dans notre apprentissage : un projet à la fois formateur, motivant et valorisant, qui nous aura permis de progresser autant techniquement que méthodologiquement.
+            </p>
+            <p class="remerciements">Je remercie énormément Romain Cuche avec qui j’ai pu travailler sur ce projet :</p>
+            <ul class="linkedin">
+                <li><a href="https://www.linkedin.com/in/romain-cuche-a38a8736b/" target="_blank">Romain Cuche (LinkedIn)</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!--  Fin -->
+    <section id="fin">
+        <p class="title-section">Merci de votre attention !</p>
+        <p class = "retour-accueil" ><a href="index.html">Accueil</a></p>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Maksimilien Deutsch</p>
+    </footer>
+
+<script>
+    var menu_toggle = document.querySelector('header .menu-toggle');
+    var menu = document.querySelector('header .menu');
+    menu_toggle.onclick = function(){
+        menu_toggle.classList.toggle('active') ; 
+        menu.classList.toggle('responsive') ; 
+    }
+</script>
+
+<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.js"></script>
+<script src="pdf-viewer.js"></script>
+
+</body>
+</html>

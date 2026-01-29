@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Panneau Solaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- section acceuil -->
+     <section id="page-de-garde-site">
+      <header>
+        <div class="logo-epf">
+            <img src="images/logo-epf.jpeg" alt="Logo EPF">
+        </div>
+
+        <!-- menu responsive -->
+        <div class="menu-toggle"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#rapport">Rapport</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#demonstration-pps">Démonstration</a></li>
+        </ul>
+      </header>
+      <div class="Slogan">
+          <h1>Innovation - Audace - Engagement</h1>
+      </div>
+    </section> 
+
+    <!-- section Introduction-->
+     <section id="introduction">
+        <div>
+            <p class="tittle-section">Introduction</p>
+            <h1 class="sub-tittle-section">Introduction du projet </h1>
+            <div class="photo-paragraphe-pps">
+                    <div class="paragraphe-desc-pps">
+                        <p>Dans le cadre de ce projet, nous avons développé une maquette de panneau solaire intelligent, capable d’ajuster automatiquement son orientation afin de maximiser la captation d’énergie. L’idée centrale était de montrer comment un panneau photovoltaïque peut devenir autonome, réactif et optimisé grâce à l’intégration de capteurs et d’une logique embarquée.<br><br>
+                        Pour cela, la maquette est accompagnée d’une station météo, véritable centre de décision du système. Elle mesure en continu plusieurs paramètres essentiels : la luminosité, la vitesse du vent, l’humidité, la pluie et la température. Ces données permettent au panneau de s’adapter à n’importe quelle situation : suivre le soleil pour améliorer le rendement, se mettre à plat en cas de vents violents, s’incliner lorsque la pluie est détectée afin de faciliter l’évacuation de l’eau ou le nettoyage naturel, ou encore revenir en position neutre lorsque les conditions lumineuses sont insuffisantes.<br><br>
+                        L’objectif global de cette réalisation est de illustrer le fonctionnement d’un système solaire autonome moderne, similaire à ceux que l’on retrouve aujourd’hui sur les toits plats des bâtiments industriels. Cette maquette met en avant la complémentarité entre électronique, programmation, capteurs environnementaux et conception mécanique. Elle intègre également une interface web permettant de suivre en temps réel les mesures et l’état du système, rendant la démonstration complète, pédagogique et intuitive.<br><br>
+                        Ce projet constitue ainsi une preuve de concept concrète, montrant que l’optimisation énergétique passe non seulement par la production d’énergie solaire, mais aussi par une gestion intelligente et dynamique de son environnement.</p>
+                    </div>
+                    <img src="images/projet-panneau-solaire.jpeg" alt="">
+            </div>
+        </div>
+    </section> 
+
+    <!-- section rapport -->
+<section id="rapport">
+  <p class="tittle-section">Rapport</p>
+  <div id="pdf-container" data-pdf="rapports/rapport-panneau-solaire.pdf"></div>
+  <p class = "pdf-fallback">Si le PDF ne s’affiche pas, vous pouvez le <a href="rapports/rapport-panneau-solaire.pdf" download>Télécharger ici</a>.</p>
+</section>
+
+
+<!--  Conclusion  -->
+    <section id="conclusion">
+        <p class="tittle-section">Conclusion</p>
+        <div class="conclusion-linkedin">
+            <p>
+            À travers ce projet de panneau solaire autonome, j’ai énormément appris, aussi bien sur le plan technique que méthodologique. Ce travail m’a permis de comprendre en profondeur le fonctionnement d’un système mêlant électronique, capteurs, moteurs et interface web, et surtout de voir comment toutes ces briques peuvent communiquer entre elles pour former un dispositif cohérent et fiable.<br><br>
+            L’un des apprentissages majeurs a été ma prise en main de l’Arduino. J’ai découvert comment exploiter différents capteurs (luminosité, humidité, température, vent) et comment piloter des servomoteurs de manière précise. Manipuler physiquement les composants, les calibrer, analyser les valeurs renvoyées et adapter le comportement du système m’a donné une vision beaucoup plus concrète et accessible de l’électronique embarquée.<br><br>
+            En parallèle, ce projet m’a permis de développer mes compétences en développement web, notamment en HTML, CSS et JavaScript. La création de la page web de suivi des données m’a appris à structurer une interface claire, à styliser des éléments pour rendre les informations lisibles, et surtout à manipuler des données en temps réel grâce au WebSocket. Voir l’évolution du panneau directement depuis une interface que j’avais moi‑même construite a été particulièrement gratifiant.<br><br>
+            Enfin, au‑delà de l’aspect technique, ce projet m’a appris à travailler de manière organisée, à collaborer efficacement avec une équipe nombreuse et à m’adapter aux imprévus. J’ai aussi réalisé l’importance d’une bonne communication entre chaque partie du système, qu’elle soit humaine ou électronique.<br><br>
+            En résumé, ce projet m’a offert une expérience complète qui m’a permis de progresser, de mieux comprendre les enjeux d’un système autonome et de renforcer des compétences que je pourrai mobiliser dans mes futurs projets d’ingénierie.
+            </p>
+            <p class="remerciements">Je remercie énormément toutes les personnes avec qui j'ai pu travailler sur ce projet :</p>
+            <ul class="linkedin">
+                <li><a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-hugues-518586390/" target="_blank">Jérémie Hugues (LinkedIn)</a></li>
+                <li><p>Romain Lhept</p></li>
+                <li><a href="https://www.linkedin.com/in/mathispauly/" target="_blank">Mathis Pauly (LinkedIn)</a></li>
+                <li><a href="https://www.linkedin.com/in/timoth%C3%A9-bordier-33489b215/" target="_blank">Timothé Bordier(LinkedIn)</a></li>
+                <li><p>Antoine Poupon</p></li>
+            </ul>
+        </div>
+    </section>
+
+<!--  Démonstatration  -->
+    <section id="demonstration-pps">
+        <p class="title-section">Démonstration</p>
+        <div class="demonstration">
+            <p>
+            Dans mon système, j’utilise deux servomoteurs : l’un “scan” balaye l’horizon pour mesurer la lumière, l’autre “track” oriente réellement le panneau. Au démarrage, je centre les deux à 90°, j’initialise l’écran puis, à intervalle régulier (actuellement 20 s), je fais tourner le servo de scan sur 18 positions entre 10° et 180° ; à chaque pas je lis la luminosité et je mémorise l’angle où la lumière est maximale.<br></br> Ensuite, je décide de l’orientation du panneau avec des priorités : d’abord le vent, puis l’humidité, sinon la lumière. Concrètement, si la vitesse du vent (simulée par un potentiomètre) dépasse 50 km/h, je mets le panneau à plat (90°) pour limiter la prise au vent ; si l’humidité dépasse 90 %, je l’incline à 45° pour favoriser l’écoulement de l’eau ou le nettoyage ; sinon, en conditions normales, j’aligne le panneau sur l’angle lumineux optimal trouvé par le balayage.<br></br> Je mets à jour cette commande chaque seconde, et j’affiche en continu sur le LCD la météo, la luminosité en %, la position optimale et le mode actif (Vent / Humidité / Lumière). Pour plus d'informations sur le programme Arduino vous pouvez consulter la partie <a href="#rapport">rapport</a> du site.
+            Les informations précédemment citées sont également disponibles sur le site web édité pour l'occasion et dont l'exemple vous est montré si dessous.     
+            </p>
+            <video controls>
+                <source src="images/video-panneau-solaire.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+        </div>
+        <div class="site-web-pps">
+            <p>
+            Sur le site web, j’affiche toutes les informations du panneau solaire en temps réel. Pour ça, ma carte ESP8266 envoie régulièrement les données qu’elle reçoit de l’Arduino (température, humidité, vent, lumière, angle du panneau).<br></br> Dès que la page web s’ouvre, elle se connecte automatiquement à la carte et commence à recevoir ces infos sans jamais recharger la page. À chaque message reçu, j’actualise les chiffres dans les petites cartes qui s’affichent à l’écran : la température, la luminosité, l’angle du panneau, etc.<br></br>  L’interface est juste une grille de panneaux visuels qui se mettent à jour en continu, ce qui permet de suivre ce que fait le panneau solaire comme si on le regardait en direct.
+            La page est essentielle car on ne peut pas voir le panneau solaire depuis l'intérieur.<br></br>  On ne l'a pas fait dans ce projet mais il est possible d'envoyer des données à la carte qui gère le panneau solaire pour pouvoir par exemple l'activer, le mettre en position de sécurité manuellement etc.
+            </p>
+            <img src="images/site-panneau-solaire.png" alt="Photo démonstration panneau solaire">
+            </div>
+    </section>
+
+    <!--  Fin -->
+    <section id="fin">
+        <p class="title-section">Merci de votre attention !</p>
+        <p class = "retour-accueil" ><a href="index.html">Accueil</a></p>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Maksimilien Deutsch</p>
+    </footer>
+
+
+    <!-- script du pdf  -->
+
+<script>
+    var menu_toggle = document.querySelector('header .menu-toggle');
+    var menu = document.querySelector('header .menu');
+    menu_toggle.onclick = function(){
+        menu_toggle.classList.toggle('active') ; 
+        menu.classList.toggle('responsive') ; 
+    }
+</script>
+
+<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.js"></script>
+<script src="pdf-viewer.js"></script>
+
+</body>
+</html>

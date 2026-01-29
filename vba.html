@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Panneau Solaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- section acceuil -->
+     <section id="page-de-garde-site">
+      <header>
+        <div class="logo-epf">
+            <img src="images/logo-epf.jpeg" alt="Logo EPF">
+        </div>
+
+        <!-- menu responsive -->
+        <div class="menu-toggle"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#rapports">Rapports</a></li>
+            <li><a href="#presentation-pvba">Présentation</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </header>
+      <div class="Slogan">
+          <h1>Innovation - Audace - Engagement</h1>
+      </div>
+    </section> 
+
+    <!-- section Introduction-->
+     <section id="introduction">
+        <div>
+            <p class="tittle-section">Introduction</p>
+            <h1 class="sub-tittle-section">Introduction du projet </h1>
+            <div class="photo-paragraphe-pvba">
+                    <div class="paragraphe-desc-pvba">
+                        <p>Dans ce projet, nous avons développé un outil complet en VBA permettant d’automatiser et d’optimiser la gestion d’une plateforme artisanale directement depuis Excel. L’objectif était de créer un environnement fonctionnel regroupant l’ensemble des opérations essentielles : gestion des artisans et fournisseurs, suivi des clients, traitement des commandes, analyse des stocks, et génération de statistiques pour améliorer la prise de décision. Pour cela, nous avons conçu plusieurs "UserForms" (Fiches) ergonomiques reliés à des feuilles de données, facilitant la navigation et rendant l’outil accessible même à des utilisateurs non familiarisés avec Excel avancé.
+                        <br></br>
+                        Le cœur du projet repose sur l’écriture de macros robustes, capables de parcourir, filtrer, structurer et afficher les informations de manière fiable. Nous avons mis en place des fonctions dédiées pour charger efficacement les données, éviter les doublons, gérer les identifiants automatiques et sécuriser les entrées utilisateur. Des contrôles systématiques ont été ajoutés afin de réduire les risques d’erreurs et garantir la cohérence de l’ensemble des informations manipulées.
+                        <br></br>
+                        L’outil offre ainsi un système dynamique capable de générer des bilans chiffrés, d’identifier les retards, d’afficher les statistiques commerciales ou encore de produire automatiquement des graphiques. Ce projet nous a permis de maîtriser plus en profondeur le langage VBA, la logique événementielle et la conception d’interfaces interactives. Il constitue une étape importante dans notre apprentissage du développement appliqué à la gestion et à l’automatisation de données.
+                        </p>
+                    </div>
+                    <img src="images/intro-vba.png" alt="">
+            </div>
+        </div>
+    </section> 
+
+<!-- section rapport cahier de recette  -->
+    <section id="rapports"></section>      
+    <section class="rapport">
+        <p class="tittle-section">Cahier de recette</p>
+        <div id="pdf-container" data-pdf="rapports/rapport-vba-cdr.pdf"></div>
+        <p class="pdf-fallback">Si le PDF ne s’affiche pas, vous pouvez le <a href="rapports/rapport-vba-cdr.pdf" download>Télécharger ici</a>.</p>
+    </section>
+    <section class="rapport">
+        <p class="tittle-section">Guide de fonctionnement</p>
+        <div class="pdf-container pdf-gdf" data-pdf="rapports/rapport-vba-gdf.pdf"></div>
+        <p class="pdf-fallback">Si le PDF ne s’affiche pas, vous pouvez le <a href="rapports/rapport-vba-gdf.pdf" download>Télécharger ici</a>.</p>
+    </section>
+    </section>
+
+
+<!-- Présentation   -->
+    <section id="presentation-pvba">
+        <p class="title-section">Présentation</p>
+        <div class="visual-basics">
+            <p>
+            L’image ci‑contre présente le Menu Principal de notre application développée en VBA. Il s’agit d’un UserForm central, conçu comme un tableau de bord qui permet à l’utilisateur de naviguer facilement entre les différentes fonctionnalités du projet. Au centre de la fenêtre, trois boutons imposants structurent l’interface : Gestion des artisans et fournisseurs, Gestion des commandes clients et Gestion commerciale. Ce choix de mise en page vise à offrir une expérience simple, intuitive et cohérente, même pour un utilisateur non expert.
+            <br></br>
+            À gauche, l’explorateur de projet affiche l’ensemble des UserForms créés, permettant de visualiser la structure globale du code et la hiérarchie des interfaces. En dessous, la fenêtre des propriétés montre les paramètres du formulaire sélectionné, comme son titre, ses couleurs ou ses dimensions. Cet espace est essentiel pour ajuster précisément l’apparence du menu et garantir son homogénéité visuelle.
+            <br></br>
+            Ce tableau de bord constitue donc le point d’entrée de l’application : c’est à partir de lui que l’utilisateur accède à toutes les fonctions de gestion. Sa simplicité et son organisation ont été pensées pour rendre l’outil agréable à utiliser et facile à comprendre.  
+            </p>
+            <image src="images/visual-basics.png" alt="Photo du Visual Basics">
+        </div>
+        <div class="code-vba">
+            <p>
+            L’image ci‑contre montre un exemple du code VBA utilisé dans notre application. Ici, il s’agit plus précisément de la procédure associée au bouton Valider, chargée de calculer le prix moyen d’un type de travaux dans un département donné. Ce morceau de code illustre parfaitement la structure générale de nos macros : récupération des données saisies par l’utilisateur, vérifications des champs obligatoires, et recherche dans plusieurs feuilles Excel. On y voit notamment un contrôle sur le département et le type de travaux, permettant d’éviter tout calcul erroné.
+            <br></br> 
+            Le script parcourt ensuite la feuille Devis pour filtrer uniquement les devis correspondant aux critères choisis. Grâce à l’utilisation d’un VLookup, il récupère automatiquement le code postal associé à chaque artisan, ce qui permet d’isoler les devis du bon département. Le total des montants et le nombre de devis pertinents sont alors cumulés.
+            <br></br>
+            Enfin, cet exemple de code met en évidence l’affichage dynamique du résultat dans la ListBox du UserForm. Si des devis existent, le prix moyen est calculé et formaté ; sinon, un message “Aucun devis” apparaît. Ce bloc illustre clairement notre manière de programmer : vérification, filtrage, calcul et restitution du résultat à l’utilisateur.
+            </p>
+            <img src="images/code-vba.png" alt="Photo du code VBA">
+            </div>
+    </section>
+
+
+<!--  Conclusion  -->
+    <section id="conclusion">
+        <p class="tittle-section">Conclusion</p>
+        <div class="conclusion-linkedin">
+            <p>
+            Ce projet nous a permis de développer un ensemble solide de compétences techniques et méthodologiques autour du langage VBA et de l’automatisation sous Excel. En concevant une application complète, intégrant plusieurs UserForms et de nombreuses macros, nous avons appris à structurer un code clair, réutilisable et capable de gérer des données de manière fiable. Nous avons également perfectionné notre capacité à manipuler des feuilles de calcul, à effectuer des recherches automatisées, à contrôler les entrées utilisateur et à afficher des résultats dynamiques dans une interface ergonomique.
+            <br></br>
+            La création d’un tableau de bord fonctionnel nous a également entraînés à réfléchir en termes d’expérience utilisateur, en organisant efficacement l’accès aux différentes fonctionnalités. Nous avons dû résoudre plusieurs problèmes liés aux chargements de données, aux erreurs potentielles ou à la cohérence entre les feuilles, ce qui a renforcé nos compétences en débogage et en conception robuste.
+            <br></br>
+            Au‑delà de l’aspect technique, ce projet nous a appris à travailler avec rigueur, à documenter nos choix et à construire une logique de gestion cohérente. Il constitue une excellente mise en pratique du développement orienté gestion et illustre parfaitement l’impact que peut avoir l’automatisation sur la fiabilité et l’efficacité d’un outil professionnel.
+            </p>
+            <p class="remerciements">Je remercie énormément Romain Cuche avec qui j’ai pu travailler sur ce projet :</p>
+            <ul class="linkedin">
+                <li><a href="https://www.linkedin.com/in/mathispauly/" target="_blank">Mathis Pauly (LinkedIn)</a></li>
+                <li><a href="https://www.linkedin.com/in/goulet-martin-18a7082a4/" target="_blank">Martin Goulet (LinkedIn)</a></li>
+                <li><a href="https://www.linkedin.com/in/romain-cuche-a38a8736b/" target="_blank">Romain Cuche (LinkedIn)</a></li>
+                <li><p>Pierre Touet-Si-Abdelhadi</p></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!--  Fin -->
+    <section id="fin">
+        <p class="title-section">Merci de votre attention !</p>
+        <p class = "retour-accueil" ><a href="index.html">Accueil</a></p>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Maksimilien Deutsch</p>
+    </footer>
+
+<script>
+    var menu_toggle = document.querySelector('header .menu-toggle');
+    var menu = document.querySelector('header .menu');
+    menu_toggle.onclick = function(){
+        menu_toggle.classList.toggle('active') ; 
+        menu.classList.toggle('responsive') ; 
+    }
+</script>
+
+<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.js"></script>
+<script src="pdf-viewer.js"></script>
+
+</body>
+</html>

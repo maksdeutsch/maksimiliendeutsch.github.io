@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Maksimilien Deutsch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- section acceuil -->
+     <section id="page-de-garde-site">
+      <header>
+        <div class="logo-epf">
+            <img src="images/logo-epf.jpeg" alt="Logo EPF">
+        </div>
+
+        <!-- menu responsive -->
+        <div class="menu-toggle"></div>
+
+        <ul class="menu">
+            <li><a href="#qui-suis-je">Qui suis-je ?</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </header>
+      <div class="Slogan">
+          <h1>Innovation - Audace - Engagement</h1>
+      </div>
+    </section> 
+
+    <!-- section qui suis-je -->
+     <section id="qui-suis-je">
+        <div>
+            <p class="tittle-section">à propos</p>
+            <h1 class="sub-tittle-section">Qui suis-je ? </h1>
+            <div class="photo-portrait">
+                    <div class="paragraphe-desc">
+                        <p>Je m’appelle Maksimilien Deutsch et je suis actuellement étudiant en troisième année à l’EPF - Cachan, école d’ingénieurs généraliste. Ma formation me permet d’acquérir des bases solides en sciences, en ingénierie et en technologies, tout en développant une approche rigoureuse de la résolution de problèmes techniques.<br><br>
+                        Au cours de mon parcours à l’EPF, j’ai eu l’opportunité de travailler sur de nombreux projets académiques, aussi bien individuels que collectifs. Ces projets m’ont permis de mettre en pratique les connaissances théoriques abordées en cours, notamment en programmation, en modélisation, en analyse de systèmes et en conception de solutions techniques adaptées à des problématiques concrètes. Ils ont également contribué au développement de compétences essentielles telles que l’organisation, la gestion de projet, la communication et le travail en équipe.<br><br>
+                        Curieux et motivé, je suis passionné par les domaines de l’informatique, le ferroviaire et l’automobile. J’apprécie comprendre le fonctionnement des technologies en profondeur et explorer de nouvelles solutions, que ce soit dans le cadre de projets académiques ou personnels. La création de ce site internet s’inscrit pleinement dans cette démarche : il a pour objectif de regrouper et de présenter les projets réalisés au cours de mes années d’études, tout en me permettant d’approfondir mes compétences en développement web acquises dans la matière “Transmission de l’Information” à l’EPF.<br><br>
+                        En parallèle de mes études, je m’intéresse activement aux nouvelles technologies et aux outils numériques. J’aime apprendre par la pratique, expérimenter, tester et améliorer continuellement mes réalisations. Cette approche me permet de progresser de manière autonome et de consolider mes compétences techniques en dehors du cadre strict des cours.<br><br>
+                        Enfin, j’accorde une grande importance au travail collaboratif. Les projets menés en équipe représentent pour moi une véritable source d’apprentissage, tant sur le plan technique qu' humain. Ils permettent de confronter des idées, de partager des compétences et d’atteindre des objectifs communs. À travers ce portfolio, je souhaite présenter mon parcours, mes compétences et mon intérêt pour les métiers de l’ingénierie et de l’innovation.
+                        </p>
+                    </div>
+                <img src="images/maksimilien.jpeg" alt="">
+            </div>
+        </div>
+    </section> 
+
+    <!-- section projets destination -->
+    <section id="projets">
+        <p class="tittle-section">Projets</p>
+        <div class="liste-photos">
+            <div class="projets-img">
+                <a href="panneau-solaire.html">
+                <img src="images/panneau-solaire.jpg" alt="">
+                <div class="show-country"><p>PANNEAU SOLAIRE</p></div>
+                </a>
+            </div>
+            <div class="projets-img">
+                <a href="java.html">
+                <img src="images/java.jpg" alt="">
+                <div class="show-country"><p>JAVA</p></div>
+                </a>
+            </div>
+            <div class="projets-img">
+                <a href="catia-v5.html">
+                <img src="images/catia-v5.png" alt="">
+                <div class="show-country"><p>CATIA V5</p></div>
+                </a>
+            </div>
+            <div class="projets-img">
+                <a href="vba.html">
+                <img src="images/vba.png" alt="">
+                <div class="show-country"><p>EXCEL - VBA</p></div>
+                </a>
+            </div>
+        </div>
+    </section> 
+
+<!--  section contact -->
+    <section id="contact">
+        <p class="tittle-section">contact</p>
+        <h1 class="sub-tittle-section">Comment me contacter ?</h1>
+        <div class = " infos-contact">
+            <div class = "infos">
+            <p> Email : <a href="mailto:maksimilien.deutsch@epfedu.fr">maksimilien.deutsch@epfedu.fr</a></p>
+            <p> Téléphone : +33 7 68 89 95 19</p>
+            <p> LinkedIn : <a href="https://www.linkedin.com/in/maksimilien-deutsch-74bb2139b/" target="_blank">Maksimilien Deutsch</a></p>
+            </div>
+            <div class = "logos">
+            <img src="images/email.png" alt="">
+            <img src="images/telephone.png" alt="">
+            <img src="images/linkedin.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Maksimilien Deutsch</p>
+    </footer>
+
+<script>
+    var menu_toggle = document.querySelector('header .menu-toggle');
+    var menu = document.querySelector('header .menu');
+    menu_toggle.onclick = function(){
+        menu_toggle.classList.toggle('active') ; 
+        menu.classList.toggle('responsive') ; 
+    }
+</script>
+
+</body>
+</html>

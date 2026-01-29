@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Panneau Solaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- section acceuil -->
+     <section id="page-de-garde-site">
+      <header>
+        <div class="logo-epf">
+            <img src="images/logo-epf.jpeg" alt="Logo EPF">
+        </div>
+
+        <!-- menu responsive -->
+        <div class="menu-toggle"></div>
+
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#rapport">Rapport</a></li>
+            <li><a href="#presentation-pcv5">Présentation</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </header>
+      <div class="Slogan">
+          <h1>Innovation - Audace - Engagement</h1>
+      </div>
+    </section> 
+
+    <!-- section Introduction-->
+     <section id="introduction">
+        <div>
+            <p class="tittle-section">Introduction</p>
+            <h1 class="sub-tittle-section">Introduction du projet </h1>
+            <div class="photo-paragraphe-pcv5">
+                    <div class="paragraphe-desc-pcv5">
+                        <p>Dans le cadre de ce projet de conception système, nous cherchons à valider un ensemble de compétences essentielles à l’ingénierie mécanique moderne. Il s’agit notamment de maîtriser une démarche complète allant de l’analyse fonctionnelle à la modélisation 3D, en passant par le dimensionnement mécanique, la simulation et la validation par éléments finis. Ce projet constitue également une mise en pratique de la méthodologie d’ingénierie système, qui structure la réflexion depuis l’expression du besoin jusqu’à la vérification finale.
+                        <br></br>
+                        La réalisation d’un vérin rotatif destiné à un bras mécanisé présente un intérêt pédagogique majeur : elle mobilise simultanément des compétences en modélisation sous CATIA, en calculs mécaniques, en simulation AMESIM, ainsi qu’en gestion de projet et en travail collaboratif. En répondant à un cahier des charges réaliste et exigeant, nous apprenons à justifier nos choix techniques, à optimiser une conception et à garantir sa robustesse face à des contraintes opérationnelles fortes.
+                        <br></br>
+                        Au-delà de la conception, ce projet nous permet de développer notre capacité à analyser un besoin industriel, à proposer des solutions viables et à évaluer leur pertinence, ce qui constitue une étape essentielle dans la formation d’un ingénieur.</p>
+                    </div>
+                    <img src="images/corps-central.png" alt="">
+            </div>
+        </div>
+    </section> 
+
+    <!-- section rapport -->
+<section id="rapport">
+  <p class="tittle-section">Rapport</p>
+  <div id="pdf-container" data-pdf="rapports/rapport-catia-v5.pdf"></div>
+  <p class = "pdf-fallback">Si le PDF ne s’affiche pas, vous pouvez le <a href="rapports/rapport-catia-v5.pdf" download>Télécharger ici</a>.</p>
+</section>
+
+
+<!-- Présentation   -->
+    <section id="presentation-pcv5">
+        <p class="title-section">Présentation</p>
+        <div class="excel-catia-v5">
+            <p>
+            Pour ce projet, nous avons réalisé un fichier Excel complet afin de déterminer avec précision les dimensions nécessaires pour modéliser nos pièces. Cet Excel constitue la base de tout notre travail de conception, car il regroupe les formules essentielles liées au couple, aux forces exercées sur la palette, à la section résistante ainsi qu’aux contraintes admissibles. À partir des données matériaux, comme la limite élastique de l’acier ASTM A514 et le coefficient k, nous avons calculé les contraintes maximales admissibles, notamment la contrainte de cisaillement TauAdm et la limite de sécurité 0,8 × Re. L’objectif était de s’assurer que les pièces puissent résister aux efforts tout en restant cohérentes géométriquement toujours en respectant le cahier des charges.
+            <br></br>
+            En fonction du couple demandé, l’Excel calcule automatiquement le nombre de goupilles, le nombre de vis, la longueur de palette Lres, l’épaisseur minimale lmin, ainsi que le bras de levier. Cet outil nous a permis de définir des familles de moteurs ayant des dimensions standardisées, ce qui facilite la modélisation paramétrique sous CATIA. Une fois toutes les dimensions validées dans le tableau, nous avons pu modéliser les pièces en CAO en garantissant que chaque palette et chaque arbre répondent correctement aux efforts mécaniques.  
+            </p>
+            <image src="images/excel-catia-v5.png" alt="Photo de l'excel CATIA V5">
+        </div>
+        <div class="von-mises-catia-v5">
+            <p>
+            À partir des dimensions obtenues dans notre Excel, nous avons ensuite pu réaliser les analyses de contraintes de Von Mises sur CATIA. Ces simulations sont essentielles car elles permettent de vérifier que la pièce modélisée respecte bien les limites mécaniques imposées par notre matériau ASTM A514 et par le coefficient de sécurité défini dans notre tableau. 
+            <br></br>
+            L’image ci‑contre illustre parfaitement ce travail : on y voit la pièce entièrement maillée, avec des zones colorées représentant l’intensité des contraintes dans la structure. Le maillage nous permet d’obtenir une répartition précise des efforts et de localiser les zones critiques. Grâce au capteur intégré dans le modèle, nous relevons la valeur maximale de contrainte, ici affichée en rouge, ce qui nous permet de la comparer directement aux valeurs théoriques calculées dans l’Excel.
+            <br></br>
+            Ce lien entre calculs numériques et simulation par éléments finis est indispensable : il confirme que les hypothèses prises dans notre tableau sont bien cohérentes avec la réalité mécanique du modèle.
+            <br></br>
+            Ainsi, pour chaque famille de couple, nous validons que la contrainte obtenue reste inférieure à la limite élastique réduite (0,8 × Re), garantissant que la pièce ne subira aucune déformation plastique. Cette étape finalise la boucle de conception : l’Excel définit les dimensions, la CAO les matérialise, et la simulation vérifie que la pièce tient mécaniquement.
+            </p>
+            <img src="images/von-mises.png" alt="Photo des contraintes de Von Mises">
+            </div>
+    </section>
+
+
+<!--  Conclusion  -->
+    <section id="conclusion">
+        <p class="tittle-section">Conclusion</p>
+        <div class="conclusion-linkedin">
+            <p>
+            Ce projet nous a permis de suivre l’intégralité d’une démarche d’ingénierie, depuis l’analyse des besoins jusqu’à la validation mécanique finale. En réalisant notre tableau Excel, nous avons posé les fondations du dimensionnement : il nous a offert une vision précise des efforts, des contraintes admissibles et des dimensions nécessaires pour modéliser correctement chaque pièce. Cette approche rigoureuse a rendu la CAO plus efficace et a permis d’obtenir des modèles paramétrés cohérents, capables de s’adapter automatiquement aux différentes familles de couples.
+            <br></br>
+            Les simulations effectuées sous CATIA, notamment les analyses de Von Mises et les validations par maillage, ont ensuite confirmé la pertinence de nos choix. Elles ont montré que les contraintes dans les pièces restaient inférieures aux limites mécaniques imposées, validant ainsi la robustesse et la fiabilité des solutions retenues. Ce travail a également mis en lumière l’importance de la cohérence entre les calculs théoriques et les résultats numériques.
+            <br></br>
+            Au‑delà de l’aspect technique, ce projet nous a appris à travailler en équipe, à structurer notre réflexion et à gérer un projet d’ingénierie complet. Il nous a aussi confrontés aux réalités de la conception mécanique : compromis, itérations, limites matériaux et validation expérimentale par simulation. En somme, ce projet constitue une expérience enrichissante et formatrice, qui nous prépare à aborder avec méthode et confiance les futurs défis d’ingénierie.
+            </p>
+            <p class="remerciements">Je remercie énormément toutes les personnes avec qui j'ai pu travailler sur ce projet :</p>
+            <ul class="linkedin">
+                <li><a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-hugues-518586390/" target="_blank">Jérémie Hugues (LinkedIn)</a></li>
+                <li><p>Romain Lhept</p></li>
+                <li><a href="https://www.linkedin.com/in/mathispauly/" target="_blank">Mathis Pauly (LinkedIn)</a></li>
+                <li><a href="https://www.linkedin.com/in/goulet-martin-18a7082a4/" target="_blank">Martin Goulet (LinkedIn)</a></li>
+                <li><p>Pierre Touet-Si-Abdelhadi</p></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+
+    <!--  Fin -->
+    <section id="fin">
+        <p class="title-section">Merci de votre attention !</p>
+        <p class = "retour-accueil" ><a href="index.html">Accueil</a></p>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <p>Maksimilien Deutsch</p>
+    </footer>
+
+<script>
+    var menu_toggle = document.querySelector('header .menu-toggle');
+    var menu = document.querySelector('header .menu');
+    menu_toggle.onclick = function(){
+        menu_toggle.classList.toggle('active') ; 
+        menu.classList.toggle('responsive') ; 
+    }
+</script>
+
+<script src="https://unpkg.com/pdfjs-dist@3.9.179/build/pdf.js"></script>
+<script src="pdf-viewer.js"></script>
+
+</body>
+</html>
